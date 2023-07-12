@@ -16,12 +16,10 @@ def hide_text():
     global generated_password
     global stored_password
     if checked_var.get() == 1:
-        print("Supposed to hide text.")
         stored_password = generated_password
         text_entry_box.delete(0, END)
         text_entry_box.insert(0, "************")
     else:
-        print("Supposed to return text to password.")
         text_entry_box.delete(0, END)
         text_entry_box.insert(0, stored_password)
 
@@ -36,7 +34,6 @@ def validate_entry(text):
 def on_entry_change(*args):
     global generated_password
     generated_password = entry_var.get()
-    print("generated password is now: ", generated_password)
 
 
 def generate_password():
